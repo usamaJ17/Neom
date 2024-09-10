@@ -1,0 +1,43 @@
+[2024-05-26 09:09:37] production.INFO: Detected N+1 Query  
+[2024-05-26 09:09:37] production.INFO: Model: App\Models\BedType
+Relation: App\Models\Room
+Num-Called: 18
+Call-Stack:
+#13 /app/Http/Controllers/Admin/AdminController.php:149
+#14 /vendor/laravel/framework/src/Illuminate/Routing/Controller.php:54
+#15 /vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php:43
+#16 /vendor/laravel/framework/src/Illuminate/Routing/Route.php:259
+#17 /vendor/laravel/framework/src/Illuminate/Routing/Route.php:205
+#18 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:798
+#19 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#20 /app/Http/Middleware/AdminPermissionMiddleware.php:23
+#21 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#22 /app/Http/Middleware/RedirectIfNotAdmin.php:30
+#23 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#24 /app/Http/Middleware/LanguageMiddleware.php:22
+#25 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#26 /vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+#27 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#28 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:78
+#29 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#30 /vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:49
+#31 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#32 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:121
+#33 /vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:64
+#34 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#35 /vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php:37
+#36 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#37 /vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php:67
+#38 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#39 /vendor/laramin/utility/src/Utility.php:14
+#40 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+#41 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:116
+#42 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:797
+#43 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:776
+#44 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:740
+#45 /vendor/laravel/framework/src/Illuminate/Routing/Router.php:729
+#46 /vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:190
+#47 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:141
+#48 /vendor/beyondcode/laravel-query-detector/src/QueryDetectorMiddleware.php:33
+#49 /vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+  

@@ -48,7 +48,7 @@ Route::controller('SiteController')->group(function () {
     
     Route::get('/', function () {
         return redirect('/admin');
-    });
+    })->name('home');
     
     
     // Route::get('/', 'index')->name('home');

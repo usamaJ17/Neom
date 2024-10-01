@@ -30,6 +30,10 @@ class SupportTicket extends Model
     public function supportMessage(){
         return $this->hasMany(SupportMessage::class);
     }
+    public function RoomItemInspection()
+    {
+        return $this->belongsTo(RoomItemInspection::class);
+    }
 
     public function statusBadge(): Attribute
     {

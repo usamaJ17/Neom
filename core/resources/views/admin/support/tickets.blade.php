@@ -109,6 +109,18 @@
                           
                             
                         </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label> @lang('Inspection')</label>
+                                       
+                                    <select class="form-control"  name="room_item_inspection_id" id="room_item_inspection_id" required>
+                                            <option disable selected value="">Select Inspection</option>
+                                            @foreach ($inspection as $item)
+                                                <option value="{{ $item->id }}">ID #{{ $item->id }}</option>
+                                            @endforeach
+                                    </select>
+                            </div>
+                        </div>
 
                         <div class="modal-footer">
                             <button class="btn btn--primary w-100 h-45" type="submit">@lang('Submit')</button>
